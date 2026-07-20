@@ -53,3 +53,18 @@ print("The length of the string 'Hello' is:", len("Hello"))
 print("The type of the variable 10 is:", type(10))
 print("The range of numbers from 0 to 4 is:", list(range(5)))
 print("The absolute value of -5 is:", abs(-5))
+
+print("Parameterized functions are functions that accept parameters (inputs) to perform specific tasks. They allow you to pass different values to the function, making it more flexible and reusable. Parameters can be of any data type, including numbers, strings, lists, and even other functions.")
+
+def greet(name):
+    """This function greets a person with their name."""
+    return f"Hello, {name}!"
+print(greet("Alice"))
+
+print("Default arguments are values that are assigned to function parameters if no argument is provided during the function call. They allow you to define functions with optional parameters, making the function more versatile.")
+
+def greetWithDefault(name="Guest"):
+    """This function greets a person with their name, or 'Guest' if no name is provided."""
+    return f"Hello, {name}!"
+print(greetWithDefault("Bob"))
+print(greetWithDefault())  # No argument provided, uses default value
