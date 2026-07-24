@@ -15,7 +15,7 @@ with open("example.txt", "r") as file:
 print("Content of 'example.txt':")
 print(content)
 
-print("'r' mode is used for reading files,\n'w' mode is used for writing files (overwrites existing content), and \n'a' mode is used for appending to files (adds content to the end of the file).\n 'x' mode is used for creating a new file and writing to it (fails if the file already exists).\n 'b' mode is used for binary files, and \n't' mode is used for text files (default mode).\n't' mode is text mode(default).\n'+' mode is used for updating (reading and writing) files.")
+print("'r' mode is used for reading files,\n'w' mode is used for writing files (overwrites existing content), and \n'a' mode is used for appending to files (adds content to the end of the file).\n'x' mode is used for creating a new file and writing to it (fails if the file already exists).\n'b' mode is used for binary files, and \n't' mode is used for text files (default mode).\n'+' mode is used for updating (reading and writing) files.")
 
 with open("example.txt", "a") as file:
     file.write("This line is appended to the file.\n")
@@ -24,6 +24,11 @@ with open("example.txt", "r") as file:
     content = file.read()
 print("Updated content of 'example.txt':")
 print(content)
+
+import os
+os.remove("example.txt")
+print("File 'example.txt' has been deleted using os.remove().")
+
 with open("example.txt", "x") as file:
     file.write("This is a new file created using 'x' mode.\n")
 print("A new file 'example.txt' has been created using 'x' mode.")
@@ -45,7 +50,4 @@ open_file.close()
 print("File 'example.txt' is closed.")
 
 print("Deleting a file using os module: You can delete a file using the 'os' module in Python. The 'os.remove()' function is used to delete a file.")
-import os
-os.remove("example.txt")
-print("File 'example.txt' has been deleted using os.remove().")
 
